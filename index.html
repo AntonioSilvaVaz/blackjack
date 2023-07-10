@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+        <link rel="stylesheet" href="style.css">
+        <link rel="shortcut icon" href="imgs/favicon.ico" type="image/x-icon">
+        
+        <title>BlackJack Game</title>
+    </head>
+
+<body>
+
+    <div class="start">
+        <div class="content-start">
+            <h1>Blackjack</h1>
+            <button class="start-btn">Start</button>
+        </div>
+        <div class="setting-btn">
+            <img class="img" src="imgs/others/settings.png" alt="Settings">
+        </div>
+
+        <div class="setting">
+            <h1 class="top-bet-text rulesText">Rules</h1>
+
+            <div class="rules">
+                <div class="typeOf">
+                    <h2>BlackJack</h2>
+                    <li>gets 21 in the first 2 cards</li>
+                    <br>
+                    <h2>Win</h2>
+                    <li>Gets greater value in his hand than dealer and value is less than 22</li>
+                    <li>Dealer gets his hand over 21</li>
+                    <br>
+                    <h2>Push</h2>
+                    <li>Both player and dealer get same value of cards</li>
+                    <br>
+                    <h2>Lose</h2>
+                    <li>Gets less value in his hand than dealer and value is less than 22</li>
+                    <li>Gets his hand over 21</li>
+                </div>
+                <div class="typeOf">
+                    <h2>Double Down</h2>
+                    <li>Can double bet and receive 1 more card, also just available in first 2 cards</li>
+                    <br>
+                    <h2>Insurance</h2>
+                    <li>If dealer 1º card as a value of 10 or 11 you can bet that the next dealer card is going to make blackjack</li>
+                    <br>
+                    <h2>Surrender</h2>
+                    <li>Gets half of the bet back and the game ends</li>
+                </div>
+            </div>
+
+            <div class="cardsValue">
+                <div class="cardsToghether">
+                    <img class="img" src="imgs/deck/ace-diamonds.png" alt="Ace Diamonds">
+                    <img class="img" src="imgs/deck/2-diamonds.png" alt="2 Diamonds">
+                    <img class="img" src="imgs/deck/3-diamonds.png" alt="3 Diamonds">
+                    <img class="img" src="imgs/deck/4-diamonds.png" alt="4 Diamonds">
+                    <img class="img" src="imgs/deck/5-diamonds.png" alt="5 Diamonds">
+                    <img class="img" src="imgs/deck/6-diamonds.png" alt="6 Diamonds">
+                    <img class="img" src="imgs/deck/7-diamonds.png" alt="7 Diamonds">
+                </div>
+                <div class="textToghether">
+                    <h3 class="cards-rules-text">1 or 11</h3>
+                    <h3 class="cards-rules-text">2</h3>
+                    <h3 class="cards-rules-text">3</h3>
+                    <h3 class="cards-rules-text">4</h3>
+                    <h3 class="cards-rules-text">5</h3>
+                    <h3 class="cards-rules-text">6</h3>
+                    <h3 class="cards-rules-text">7</h3>
+                </div>
+                <div class="cardsToghether">
+                    <img class="img" src="imgs/deck/8-diamonds.png" alt="8 Diamonds">
+                    <img class="img" src="imgs/deck/9-diamonds.png" alt="9 Diamonds">
+                    <img class="img" src="imgs/deck/10-diamonds.png" alt="10 Diamonds">
+                    <img class="img" src="imgs/deck/queen-diamonds.png" alt="Queen Diamonds">
+                    <img class="img" src="imgs/deck/jack-diamonds.png" alt="Jack Diamonds">
+                    <img class="img" src="imgs/deck/king-diamonds.png" alt="King Diamonds">
+                    <img class="img" src="imgs/deck/back.png" alt="Back">
+                </div>
+                <div class="textToghether">
+                    <h3 class="cards-rules-text">8</h3>
+                    <h3 class="cards-rules-text">9</h3>
+                    <h3 class="cards-rules-text">10</h3>
+                    <h3 class="cards-rules-text">10</h3>
+                    <h3 class="cards-rules-text">10</h3>
+                    <h3 class="cards-rules-text">10</h3>
+                    <h3 class="cards-rules-text">Back</h3>
+                </div>
+            </div>
+
+            <div class="closeSettingsBtn">
+                <h1>x</h1>
+            </div>
+
+            <div class="changeRulesBtn">
+                <img class="img" src="imgs/others/arrow.png" alt="Arrow">
+            </div>
+        </div>
+        
+
+    </div>
+
+    <div class="betting">
+        <div class="top-bet">
+            <h3 class="top-bet-text">Total Coins:<br> <span class="totalCoins"></span></h3>
+            <button class="bet-btn">Start</button>
+            <h3 class="top-bet-text">Possible: <br> 
+                <span class="possible-1">0</span> 
+                <span class="possible-2">0</span>
+                <span class="possible-3">0</span> 
+                <span class="possible-4">0</span> 
+            </h3>
+        </div>
+        <div class="middle-bet">
+            <h3 class="top-bet-text">Amount Betting:<br> <span class="totalBet">0</span></h3>
+            <div class="coins-container coins-selected-container">
+                <!-- COINS BET WILL BE HERE -->
+            </div>
+        </div>
+        <div class="bottom-bet">
+            <div class="coins-container">
+                <img src="imgs/tokens/red/token-500.png" alt="token-500" class="img coin addCoinToBet500">
+                <img src="imgs/tokens/red/token-200.png" alt="token-200" class="img coin addCoinToBet200">
+                <img src="imgs/tokens/red/token-100.png" alt="token-100" class="img coin addCoinToBet100">
+                <img src="imgs/tokens/red/token-50.png" alt="token-50" class="img coin addCoinToBet50">
+            </div>
+            <div class="coins-container">
+                <img src="imgs/tokens/red/token-20.png" alt="token-20" class="img coin addCoinToBet20">
+                <img src="imgs/tokens/red/token-10.png" alt="token-10" class="img coin addCoinToBet10">
+                <img src="imgs/tokens/red/token-5.png" alt="token-5" class="img coin addCoinToBet5">
+                <img src="imgs/tokens/red/token-1.png" alt="token-1" class="img coin addCoinToBet1">
+            </div>
+        </div>
+        <div class="goBackStart">
+            <img class="img" src="imgs/others/arrow.png" alt="Go Back">
+        </div>
+        <div class="backgroundBet"></div>
+    </div>
+
+    <div class="game">
+        <div class="computerSide">
+            <h2 class="total">Total: <span class="computerTotal">0</span></h2>
+            <div class="cardsGotten computerCards">
+                <!-- COMPUTER CARDS GO HERE -->
+            </div>
+        </div>
+        <div class="middleZone">
+            <div class="otherPlays">
+                <button class="btn-otherPlay doubleDown" alt="DoubleDown">2x</button>
+                <button class="btn-otherPlay surrender" alt="Surrender">
+                    <img src="imgs/others/arrow.png" class="img">
+                </button>
+            </div>
+            <div class="deckCards">
+                <div class="nextPlay">
+                    <button class="btn-play hitCardBtn">HIT</button>
+                    <button class="btn-play passCardBtn">PASS</button>
+                </div>
+            </div>
+            <div class="gameBetPlaced">
+                <button class="suprise-btn">Insurance</button>
+                <div class="bettingCoins">
+                    <!-- BETED COINS GO HERE -->
+                </div>
+            </div>
+        </div>
+        <div class="userSide">
+            <h2 class="total">Total: <span class="userTotal">0</span></h2>
+            <div class="cardsGotten userCards">
+                <!-- USER CARDS GO HERE -->
+            </div>
+        </div>
+        <div class="backgroundBet"></div>
+    </div>
+
+    <div class="results">
+        <div class="resultsTotal">
+            <h1 class="textTitleTotal decision"></h1>
+            <h3 class="textTotal" >User Total: <span class="userTotal"></span></h3>
+            <h3 class="textTotal" >Computer Total: <span class="computerTotal"></span></h3>
+        </div>
+
+        <div class="amountBets">
+            <div class="bets">
+                <h3 class="textTotal"> Amount Bet: <span class="amountBet">0</span></h3>
+                <h3 class="textTotal"> Amount Return: <span class="amountReturn">0</span> </h3>
+            </div>
+            <div class="bets">
+                <h3 class="textTotal otherBetsText"> <span class="otherBetsDiv"></span> :other bets</h3>
+                <h3 class="textTotal"> <span class="otherBetsAmount"></span>: other bets Amount</h3>
+                <h3 class="textTotal"> <span class="otherBetsReturn"></span>: other bets Return</h3>
+            </div>
+        </div>
+
+        <h3 class="totalReturnText">Total Return: <br> <span class="totalReturn"></span> </h3>
+        <button class="playAgain-btn">Start</button>
+
+    </div>
+
+<script src="jquery-3.6.3.min.js"></script>
+<script src="main.js"></script>
+</body>
+</html>

@@ -1,0 +1,537 @@
+@font-face {
+    font-family: poker;
+    src: url(fonts/poker.otf);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    text-align: center;
+    background-color: #85ee1b;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+.img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+h1 {
+    font-family: poker;
+    font-size: 50px;
+    color: white;
+}
+
+h2 {
+    font-family: poker;
+    font-size: 32px;
+    color: white;
+}
+
+li {
+    padding-left: 20px;
+    font-family: poker;
+    font-size: 20px;
+    line-height: 30px;
+    color: white;
+}
+
+h3 {
+    font-family: poker;
+    font-size: 30px;
+    color: white;
+}
+
+/* START MENU STARTS */
+
+.game {
+    display: none;
+}
+
+.start {
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    background-image: linear-gradient(25deg, rgb(31, 76, 47), rgb(58, 90, 43));
+    text-align: center;
+    display: block;
+}
+
+.content-start {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -40%);
+}
+
+.start-btn {
+    width: 200px;
+    height: 100px;
+    border: 2px solid white;
+    font-size: 30px;
+    font-family: poker;
+    border-radius: 20px;
+    margin: 30px auto;
+    transition: all 300ms;
+}
+
+.start-btn:hover {
+    border: 2px solid white;
+    background-color: rgb(20, 68, 12);
+    color: white;
+}
+
+.setting-btn {
+    position: absolute;
+    top: 1;
+    bottom: 0;
+    right: 0;
+    left: 1;
+    margin: 40px;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    padding: 20px;
+    background-color: #8fc060;
+}
+
+.setting-btn:hover {
+    cursor: pointer;
+}
+
+/* SETTINGS MENU STARTS */
+
+.setting {
+    width: 80vw;
+    height: 80vh;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: auto;
+    display: none;
+    background-color: rgba(11, 56, 30, 0.958);
+    border: 2px solid;
+}
+
+.typeOf {
+    padding: 10px 30px;
+    text-align: left;
+    width: 50%;
+}
+
+.rules {
+    display: none;
+    justify-content: center;
+    align-items: start;
+}
+
+.cardsValue {
+    display: none;
+    justify-content: center;
+    align-items: start;
+}
+
+.cardsToghether {
+    display: flex;
+    width: 100%;
+    height: 140px;
+}
+
+.textToghether {
+    display: flex;
+    width: 100%;
+    height: 70px;
+}
+
+.cards-rules-text {
+    width: 200px;
+}
+
+.closeSettingsBtn {
+    display: none;
+    position: absolute;
+    top: 1;
+    bottom: 0;
+    right: 0;
+    left: 1;
+    margin: 40px;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: #8fc060;
+}
+
+.closeSettingsBtn:hover {
+    cursor: pointer;
+}
+
+.changeRulesBtn {
+    position: absolute;
+    top: 1;
+    bottom: 0;
+    right: 0;
+    left: 1;
+    margin: 40px;
+    width: 40px;
+    height: 40px;
+    padding: 10px;
+    border-radius: 50%;
+    background-color: #8fc060;
+}
+
+.changeRulesBtn:hover {
+    cursor: pointer;
+}
+
+/* SETTINGS MENU ENDS */
+
+/* START MENU FINISHED */
+
+/* BETTING MENU STARTS */
+
+.backgroundBet {
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgb(2, 41, 12);
+    background-image: radial-gradient(rgb(48, 90, 59), rgb(1, 81, 21));
+    filter: brightness(40%);
+    z-index: -1;
+}
+
+.betting {
+    display: none;
+}
+
+.top-bet {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    width: 100%;
+}
+
+.bet-btn {
+    margin: auto;
+    text-align: center;
+    border: 0;
+    font-size: 30px;
+    font-family: poker;
+    width: 160px;
+    height: 70px;
+    box-shadow: 0px 0px 40px white;
+    background-color: white;
+}
+
+.top-bet-text {
+    width: max-content;
+    margin: 10px auto;
+    padding: 20px;
+}
+
+.middle-bet {
+    margin-top: 120px;
+    text-align: center;
+}
+
+.coins-container {
+    margin: 25px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.coin {
+    width: 60px;
+    height: 60px;
+    margin: 4px 14px;
+    border-radius: 50%;
+    background-color: azure;
+    filter: brightness(2);
+    filter: contrast(2);
+    box-shadow: 0 0 20px red;
+}
+
+.coin:hover {
+    cursor: pointer;
+}
+
+.gameCoins:hover {
+    cursor: default;
+}
+
+.bottom-bet {
+    position: absolute;
+    width: 450px;
+    height: 220px;
+    border: none;
+    margin: auto;
+    top: 1;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    border-radius: 50px 50px 0px 0px;
+    background-color: rgb(72, 8, 8);
+    box-shadow: 0 0px 40px rgb(243, 8, 8);
+}
+
+.goBackStart {
+    position: absolute;
+    top: 1;
+    bottom: 0;
+    right: 0;
+    left: 1;
+    margin: 40px;
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+    padding: 10px;
+    font-family: poker;
+    border-radius: 50%;
+    transform: rotate(180deg);
+    color: black;
+    background-color: rgb(80, 170, 132);
+}
+
+.goBackStart:hover {
+    cursor: pointer;
+}
+
+/* BETTING MENU FINISH */
+
+
+/* GAME STARTS */
+
+.computerSide {
+    width: 500px;
+    height: 33vh;
+    margin: auto;
+}
+
+.middleZone {
+    display: flex;
+    align-items: center;
+    width: 700px;
+    height: 33vh;
+    margin: auto;
+}
+
+.userSide {
+    width: 500px;
+    height: 33vh;
+    margin: auto;
+}
+
+.total {
+    color: white;
+    padding-top: 20px;
+}
+
+.deckCards {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    height: 200px;
+    margin: 30px;
+    background-image: url(imgs/deck/back.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+.animateCard {
+    position: absolute;
+    width: 130px;
+    height: 200px;
+}
+
+.animateComputerCard {
+    position: absolute;
+    width: 130px;
+    height: 200px;
+}
+
+.nextPlay {
+    position: relative;
+    z-index: 2;
+}
+
+.btn-otherPlay {
+    width: 150px;
+    height: 60px;
+    padding: 10px;
+    border: 0;
+    font-family: poker;
+    font-size: 16px;
+    border-radius: 10px;
+    background-color: white;
+    margin: 10px;
+}
+
+.btn-play {
+    width: 100px;
+    height: 40px;
+    margin: 10px;
+    font-size: 20px;
+    border-radius: 15px;
+    font-family: poker;
+    color: white;
+    border: 0;
+    background-color: rgb(106, 104, 104);
+}
+
+.btn-otherPlay {
+    width: 70px;
+    height: 70px;
+    border: 0.5px solid;
+    border-radius: 50px;
+    font-size: 30px;
+    font-family: poker;
+    color: white;
+    background-color: rgb(90, 12, 12);
+    box-shadow: 0 0 10px rgb(221, 216, 216);
+}
+
+.doubleDown {
+    text-shadow: 0px 0px 4px rgb(255, 0, 0), 0px 0px 4px rgb(199, 239, 0);
+}
+
+.doubleDown:hover {
+    cursor: pointer;
+}
+
+.bettingCoins {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: max-content;
+}
+
+.gameBetPlaced {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+.suprise-btn {
+    position: absolute;
+    display: none;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    width: 210px;
+    height: 100px;
+    font-size: 20px;
+    font-family: poker;
+    color: white;
+    text-shadow: 0px 0px 19px rgb(247, 234, 0);
+    border-radius: 10px;
+    border: 1px solid rgb(187, 146, 0);
+    background-color: rgb(69, 17, 17);
+    box-shadow: 0px 0px 10px yellow;
+    z-index: 1;
+}
+
+.cardsGotten {
+    display: flex;
+    align-items: center;
+    width: max-content;
+}
+
+.card {
+    width: 130px;
+    height: 200px;
+}
+
+/* GAME ENDS */
+
+/* RESULTS STARTS */
+
+.results {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    background-image: linear-gradient(25deg, rgb(23, 84, 25), rgb(14, 53, 29));
+    display: none;
+}
+
+.otherBetsText {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.otherBetsDiv {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+.otherBet {
+    width: max-content;
+    background-color: rgb(8, 42, 14);
+    color: white;
+    font-size: 20px;
+    padding: 20px;
+    border-radius: 20px;
+}
+
+.resultsTotal {
+    padding-top: 40px;
+}
+
+.textTitleTotal {
+    margin: 30px auto 60px;
+}
+
+.textTotal {
+    margin-top: 20px;
+}
+
+.amountBets {
+    display: flex;
+    margin-top: 70px;
+}
+
+.totalReturnText {
+    margin-top: 60px;
+}
+
+.bets {
+    width: 50%;
+}
+
+.playAgain-btn {
+    width: 170px;
+    height: 70px;
+    border: 2px solid white;
+    border-radius: 20px;
+    margin-top: 40px;
+    font-size: 25px;
+    font-family: poker;
+    transition: all 300ms;
+}
+
+.playAgain-btn:hover {
+    border: 2px solid white;
+    background-color: rgb(13, 64, 32);
+    color: white;
+}
+
+/* RESULTS END */
