@@ -1,7 +1,6 @@
 
 # Blackjack
-In this project the person who start the application can play the known game Blackjack bet with the tokens of the game and have multiple choices like in the real game (ex: surrender, double down, insurance and others). This project uses HTML, CSS, JS and JQuery  
-
+In this project, the initiator of the application can indulge in the classic game of Blackjack, placing bets using in-game tokens while enjoying a range of options mirroring those found in the real-world version of the game. These choices encompass actions such as surrendering, doubling down, taking insurance, and more. This project leverages a combination of HTML, CSS, JavaScript, and JQuery to deliver this immersive gaming experience.
 
 ## Screenshots
 
